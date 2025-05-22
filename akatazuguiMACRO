@@ -1,0 +1,10 @@
+local VirtualUser = game:service('VirtualUser')
+local RunService = game:service("RunService")
+
+RunService.RenderStepped:Connect(function()
+    VirtualUser:Button1Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+    wait(0.001)
+    VirtualUser:Button1Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+end)
+
+-- by j4ck tu papi
